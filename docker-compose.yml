@@ -1,0 +1,14 @@
+version: "2"
+services: 
+  server: 
+    build: 
+      context: "."
+    ports: 
+      - "25565:25565"
+    restart: always
+    stdin_open: true
+    tty: true
+    volumes: 
+      - "data:/data"
+volumes: 
+  data: ~
