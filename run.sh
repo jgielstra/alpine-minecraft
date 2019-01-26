@@ -1,4 +1,3 @@
-#!/bin/sh
-echo "eula=true" > eula.txt
+#!/bin/sh -eu
 MEM=${JAVA_MEM:-1G}
-java -Xmn512m -Xmx${MEM} -jar /minecraft/spigot*.jar nogui 
+exec java -Xmn512m -Xmx${MEM} -jar /minecraft/minecraft_server.*.jar nogui
